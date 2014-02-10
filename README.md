@@ -1,10 +1,8 @@
 # CCHMapClusterController Xamarin
 
-Mono port of the excellent [CCHMapClusterController library](https://github.com/nverinaud/NVSlideMenuController).
+Mono port of the excellent [CCHMapClusterController library](https://github.com/choefele/CCHMapClusterController).
 
 ## Guide
-
-
 
 ## Author
 
