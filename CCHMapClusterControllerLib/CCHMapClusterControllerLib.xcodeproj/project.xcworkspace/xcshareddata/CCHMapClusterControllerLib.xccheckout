@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>786BF63F-0CC8-48BB-A003-968F4FD7C393</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CCHMapClusterControllerLib</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E7303CBE-DED2-4902-A660-A5F2C1E890BD</key>
+		<string>ssh://github.com/nverinaud/CCHMapClusterController-Mono.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CCHMapClusterControllerLib/CCHMapClusterControllerLib.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E7303CBE-DED2-4902-A660-A5F2C1E890BD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/nverinaud/CCHMapClusterController-Mono.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E7303CBE-DED2-4902-A660-A5F2C1E890BD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E7303CBE-DED2-4902-A660-A5F2C1E890BD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CCHMapClusterController-Mono</string>
+		</dict>
+	</array>
+</dict>
+</plist>

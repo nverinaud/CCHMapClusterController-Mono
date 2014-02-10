@@ -1,0 +1,5 @@
+#!/bin/bash
+
+xcodebuild -project "CCHMapClusterControllerLib.xcodeproj" -sdk iphonesimulator -configuration Release clean build
+xcodebuild -project "CCHMapClusterControllerLib.xcodeproj" -sdk iphoneos -configuration Release clean build
+lipo -create -output ./build/LibCCHMapClusterController.a ./build/Release-iphoneos/LibCCHMapClusterController.a ./build/Release-iphonesimulator/LibCCHMapClusterController.a
