@@ -1,0 +1,3 @@
+[submodule "CCHMapClusterController"]
+	path = CCHMapClusterController
+	url = https://github.com/choefele/CCHMapClusterController
