@@ -1,3 +1,9 @@
+//
+//  Author:
+//       Nicolas VERINAUD <n.verinaud@gmail.com>
+//
+//  Copyright (c) 2014 Nicolas VERINAUD. All Rights Reserved.
+//
 using System;
 using System.Collections.Generic;
 using System.Drawing;

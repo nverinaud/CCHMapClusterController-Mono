@@ -1,8 +1,8 @@
 //
 //  Author:
-//       Nicolas VERINAUD <nicolas@chloro.eu>
+//       Nicolas VERINAUD <n.verinaud@gmail.com>
 //
-//  Copyright (c) 2014 Chlorophyll Vision. All Rights Reserved.
+//  Copyright (c) 2014 Nicolas VERINAUD. All Rights Reserved.
 //
 using System;
 
