@@ -17,5 +17,5 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyCopyright("Nicolas VERINAUD")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.4.0.*")]
+[assembly: AssemblyVersion("1.4.1.*")]
 

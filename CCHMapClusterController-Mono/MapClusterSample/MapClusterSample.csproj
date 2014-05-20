@@ -11,7 +11,7 @@
     <RootNamespace>MapClusterSample</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>MapClusterSample</AssemblyName>
-    <ReleaseVersion>1.4.0</ReleaseVersion>
+    <ReleaseVersion>1.4.1</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
