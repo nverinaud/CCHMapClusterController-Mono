@@ -82,7 +82,7 @@ namespace CCH.MapClusterController
 		bool IsOneLocation { get; }
 	}
 
-	[Model, BaseType (typeof (NSObject))]
+	[Protocol, Model, BaseType (typeof (NSObject))]
 	public partial interface CCHMapClusterControllerDelegate 
 	{
 		[Export ("mapClusterController:titleForMapClusterAnnotation:")]
@@ -191,7 +191,7 @@ namespace CCH.MapClusterController
 		[Export ("addAnnotations:")]
 		bool AddAnnotations (NSObject [] annotations);
 
-		[Export ("removeAnnotations")]
+		[Export ("removeAnnotations:")]
 		bool RemoveAnnotations (NSObject [] annotations);
 
 		[Export ("annotationsInMapRect:")]
