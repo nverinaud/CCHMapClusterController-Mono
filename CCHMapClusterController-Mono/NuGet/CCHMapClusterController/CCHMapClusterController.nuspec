@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>CCHMapClusterController</id>
+    <title>CCHMapClusterController</title>
+    <version>1.4.1</version>
+    <authors>Nicolas Verinaud, Claus Höfele</authors>
+    <owners>Nicolas Verinaud, Claus Höfele</owners>
+    <projectUrl>https://github.com/nverinaud/CCHMapClusterController-Mono</projectUrl>
+    <licenseUrl>https://github.com/nverinaud/CCHMapClusterController-Mono/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mono port of the excellent CCHMapClusterController library (https://github.com/choefele/CCHMapClusterController).</description>
+    <copyright>Copyright © Nicolas Verinaud 2014</copyright>
+    <tags>Monotouch ios map cluster</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="monotouch"  />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="lib/**" target="lib" />
+  </files>
+</package>
