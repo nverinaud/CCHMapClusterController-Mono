@@ -12,10 +12,10 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("CCHMapClusterController")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Nicolas VERINAUD")]
+[assembly: AssemblyCompany("Nicolas VERINAUD, Claus Höfele")]
 [assembly: AssemblyProduct("")]
-[assembly: AssemblyCopyright("Nicolas VERINAUD")]
+[assembly: AssemblyCopyright("Nicolas VERINAUD, Claus Höfele")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: AssemblyVersion("1.4.1.*")]
+[assembly: AssemblyVersion("1.6.3")]
 

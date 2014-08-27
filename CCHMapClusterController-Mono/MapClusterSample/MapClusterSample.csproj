@@ -96,6 +96,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="CCHMapClusterController">
+      <HintPath>..\NuGet\CCHMapClusterController\lib\Monotouch\CCHMapClusterController.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -114,12 +117,7 @@
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\CCHMapClusterController-Mono.csproj">
-      <Project>{01A43856-E249-4B76-89E2-8106C7D9F834}</Project>
-      <Name>CCHMapClusterController-Mono</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="MapViewController.xib" />
   </ItemGroup>

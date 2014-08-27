@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapClusterSample", "MapClusterSample.csproj", "{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+		NuGet|Any CPU = NuGet|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Debug|iPhone.Build.0 = Debug|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.NuGet|Any CPU.ActiveCfg = NuGet|Any CPU
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.NuGet|Any CPU.Build.0 = NuGet|Any CPU
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Release|iPhone.ActiveCfg = Release|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Release|iPhone.Build.0 = Release|iPhone
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{DA00BB5D-30C6-467F-BCAC-1E187CF7363F}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MapClusterSample.csproj
+	EndGlobalSection
+EndGlobal

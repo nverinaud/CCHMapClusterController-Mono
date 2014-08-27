@@ -35,6 +35,44 @@ namespace CCH.MapClusterController
 	{
 	}
 
+	[BaseType (typeof (NSOperation))]
+	public partial interface CCHMapClusterOperation {
+
+		[Export ("allAnnotationsMapTree")]
+		CCHMapTree AllAnnotationsMapTree { get; set; }
+
+		[Export ("visibleAnnotationsMapTree")]
+		CCHMapTree VisibleAnnotationsMapTree { get; set; }
+
+		[Export ("clusterer")]
+		CCHMapClusterer Clusterer { get; set; }
+
+		[Export ("animator")]
+		CCHMapAnimator Animator { get; set; }
+
+		[Export ("clusterControllerDelegate", ArgumentSemantic.Assign)]
+		CCHMapClusterControllerDelegate ClusterControllerDelegate { get; set; }
+
+		[Export ("clusterController", ArgumentSemantic.Assign)]
+		CCHMapClusterController ClusterController { get; set; }
+
+		[Export ("initWithMapView:cellSize:marginFactor:reuseExistingClusterAnnotations:maxZoomLevelForClustering:minUniqueLocationsForClustering:")]
+		IntPtr Constructor (MKMapView mapView, double cellSize, double marginFactor, bool reuseExistingClusterAnnotation, double maxZoomLevelForClustering, uint minUniqueLocationsForClustering);
+
+		[Static, Export ("cellMapSizeForCellSize:withMapView:")]
+		double CellMapSizeForCellSize (double cellSize, MKMapView mapView);
+
+		[Static, Export ("gridMapRectForMapRect:withCellMapSize:marginFactor:")]
+		MKMapRect GridMapRectForMapRect (MKMapRect mapRect, double cellMapSize, double marginFactor);
+	}
+
+	[BaseType (typeof (MKPolygon))]
+	public partial interface CCHMapClusterControllerDebugPolygon {
+
+		[Export ("mapClusterController", ArgumentSemantic.Assign)]
+		CCHMapClusterController MapClusterController { get; set; }
+	}
+
 	[BaseType (typeof (NSObject))]
 	[Protocol]
 	public partial interface CCHMapAnimator 
@@ -60,6 +98,9 @@ namespace CCH.MapClusterController
 	[BaseType (typeof (NSObject))]
 	public partial interface CCHMapClusterAnnotation 
 	{
+		[Export ("mapClusterController", ArgumentSemantic.Assign)]
+		CCHMapClusterController MapClusterController { get; set; }
+
 		[Export ("title", ArgumentSemantic.Copy)]
 		string Title { get; set; }
 
@@ -80,6 +121,9 @@ namespace CCH.MapClusterController
 
 		[Export ("isOneLocation")]
 		bool IsOneLocation { get; }
+
+		[Export ("mapRect")]
+		MKMapRect MapRect { get; }
 	}
 
 	[Protocol, Model, BaseType (typeof (NSObject))]
@@ -109,6 +153,15 @@ namespace CCH.MapClusterController
 
 		[Export ("cellSize")]
 		double CellSize { get; set; }
+
+		[Export ("zoomLevel")]
+		double ZoomLevel { get; }
+
+		[Export ("maxZoomLevelForClustering")]
+		double MaxZoomLevelForClustering { get; set; }
+
+		[Export ("minUniqueLocationsForClustering")]
+		uint MinUniqueLocationsForClustering { get; set; }
 
 		[Export ("debuggingEnabled")]
 		bool DebuggingEnabled { [Bind ("isDebuggingEnabled")] get; set; }

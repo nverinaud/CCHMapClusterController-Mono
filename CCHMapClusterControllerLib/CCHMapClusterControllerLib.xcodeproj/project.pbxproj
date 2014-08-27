@@ -17,6 +17,8 @@
 		371555E518A8C4440074E79F /* CCHMapTreeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 371555DA18A8C4440074E79F /* CCHMapTreeUtils.m */; };
 		371555E618A8C4440074E79F /* CCHMapViewDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 371555DC18A8C4440074E79F /* CCHMapViewDelegateProxy.m */; };
 		371555E718A8C4440074E79F /* CCHNearCenterMapClusterer.m in Sources */ = {isa = PBXBuildFile; fileRef = 371555DE18A8C4440074E79F /* CCHNearCenterMapClusterer.m */; };
+		376FE81619ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FE81319ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.m */; };
+		376FE81719ADC96300AE6EEF /* CCHMapClusterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 376FE81519ADC96300AE6EEF /* CCHMapClusterOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +59,10 @@
 		371555DC18A8C4440074E79F /* CCHMapViewDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHMapViewDelegateProxy.m; path = ../../CCHMapClusterController/CCHMapClusterController/CCHMapViewDelegateProxy.m; sourceTree = "<group>"; };
 		371555DD18A8C4440074E79F /* CCHNearCenterMapClusterer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHNearCenterMapClusterer.h; path = ../../CCHMapClusterController/CCHMapClusterController/CCHNearCenterMapClusterer.h; sourceTree = "<group>"; };
 		371555DE18A8C4440074E79F /* CCHNearCenterMapClusterer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHNearCenterMapClusterer.m; path = ../../CCHMapClusterController/CCHMapClusterController/CCHNearCenterMapClusterer.m; sourceTree = "<group>"; };
+		376FE81219ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterControllerDebugPolygon.h; path = ../../CCHMapClusterController/CCHMapClusterController/CCHMapClusterControllerDebugPolygon.h; sourceTree = "<group>"; };
+		376FE81319ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterControllerDebugPolygon.m; path = ../../CCHMapClusterController/CCHMapClusterController/CCHMapClusterControllerDebugPolygon.m; sourceTree = "<group>"; };
+		376FE81419ADC96300AE6EEF /* CCHMapClusterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCHMapClusterOperation.h; path = ../../CCHMapClusterController/CCHMapClusterController/CCHMapClusterOperation.h; sourceTree = "<group>"; };
+		376FE81519ADC96300AE6EEF /* CCHMapClusterOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCHMapClusterOperation.m; path = ../../CCHMapClusterController/CCHMapClusterController/CCHMapClusterOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,10 @@
 		371555A618A8BB3E0074E79F /* CCHMapClusterControllerLib */ = {
 			isa = PBXGroup;
 			children = (
+				376FE81219ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.h */,
+				376FE81319ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.m */,
+				376FE81419ADC96300AE6EEF /* CCHMapClusterOperation.h */,
+				376FE81519ADC96300AE6EEF /* CCHMapClusterOperation.m */,
 				371555CA18A8C4440074E79F /* CCHCenterOfMassMapClusterer.h */,
 				371555CB18A8C4440074E79F /* CCHCenterOfMassMapClusterer.m */,
 				371555CC18A8C4440074E79F /* CCHFadeInOutMapAnimator.h */,
@@ -160,7 +170,7 @@
 		3715559918A8BB3E0074E79F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Nicolas VERINAUD";
 			};
 			buildConfigurationList = 3715559C18A8BB3E0074E79F /* Build configuration list for PBXProject "CCHMapClusterControllerLib" */;
@@ -185,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				376FE81719ADC96300AE6EEF /* CCHMapClusterOperation.m in Sources */,
 				371555E618A8C4440074E79F /* CCHMapViewDelegateProxy.m in Sources */,
+				376FE81619ADC96300AE6EEF /* CCHMapClusterControllerDebugPolygon.m in Sources */,
 				371555E518A8C4440074E79F /* CCHMapTreeUtils.m in Sources */,
 				371555E018A8C4440074E79F /* CCHFadeInOutMapAnimator.m in Sources */,
 				371555E418A8C4440074E79F /* CCHMapTree.m in Sources */,
@@ -204,7 +216,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -242,7 +253,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
