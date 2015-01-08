@@ -5,12 +5,12 @@
 //  Copyright (c) 2014 Nicolas VERINAUD. All Rights Reserved.
 //
 using System;
-using MonoTouch.Foundation;
-using MonoTouch.MapKit;
-using MonoTouch.CoreLocation;
-using MonoTouch.UIKit;
-using MonoTouch.ObjCRuntime;
 using System.Runtime.InteropServices;
+using CoreLocation;
+using Foundation;
+using MapKit;
+using ObjCRuntime;
+using UIKit;
 
 namespace CCH.MapClusterController 
 {
@@ -57,7 +57,7 @@ namespace CCH.MapClusterController
 		CCHMapClusterController ClusterController { get; set; }
 
 		[Export ("initWithMapView:cellSize:marginFactor:reuseExistingClusterAnnotations:maxZoomLevelForClustering:minUniqueLocationsForClustering:")]
-		IntPtr Constructor (MKMapView mapView, double cellSize, double marginFactor, bool reuseExistingClusterAnnotation, double maxZoomLevelForClustering, uint minUniqueLocationsForClustering);
+		IntPtr Constructor (MKMapView mapView, double cellSize, double marginFactor, bool reuseExistingClusterAnnotation, double maxZoomLevelForClustering, nuint minUniqueLocationsForClustering);
 
 		[Static, Export ("cellMapSizeForCellSize:withMapView:")]
 		double CellMapSizeForCellSize (double cellSize, MKMapView mapView);
@@ -67,8 +67,8 @@ namespace CCH.MapClusterController
 	}
 
 	[BaseType (typeof (MKPolygon))]
-	public partial interface CCHMapClusterControllerDebugPolygon {
-
+	public partial interface CCHMapClusterControllerDebugPolygon 
+	{
 		[Export ("mapClusterController", ArgumentSemantic.Assign)]
 		CCHMapClusterController MapClusterController { get; set; }
 	}
@@ -161,7 +161,7 @@ namespace CCH.MapClusterController
 		double MaxZoomLevelForClustering { get; set; }
 
 		[Export ("minUniqueLocationsForClustering")]
-		uint MinUniqueLocationsForClustering { get; set; }
+		nuint MinUniqueLocationsForClustering { get; set; }
 
 		[Export ("debuggingEnabled")]
 		bool DebuggingEnabled { [Bind ("isDebuggingEnabled")] get; set; }
@@ -239,7 +239,7 @@ namespace CCH.MapClusterController
 //		IntPtr Constructor ();
 
 		[Export ("initWithNodeCapacity:minLatitude:maxLatitude:minLongitude:maxLongitude:")]
-		IntPtr Constructor (uint nodeCapacity, double minLatitude, double maxLatitude, double minLongitude, double maxLongitude);
+		IntPtr Constructor (nuint nodeCapacity, double minLatitude, double maxLatitude, double minLongitude, double maxLongitude);
 
 		[Export ("addAnnotations:")]
 		bool AddAnnotations (NSObject [] annotations);
@@ -258,10 +258,10 @@ namespace CCH.MapClusterController
 		NSObject Objects { get; }
 
 		[Export ("numObjects")]
-		uint NumObjects { get; }
+		nuint NumObjects { get; }
 
 		[Export ("initWithCapacity:")]
-		IntPtr Constructor (uint capacity);
+		IntPtr Constructor (nuint capacity);
 
 		[Export ("addObject:")]
 		void AddObject (NSObject obj);

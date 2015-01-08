@@ -6,13 +6,13 @@
 //
 using System;
 using System.Collections.Generic;
-using System.Drawing;
+using CoreGraphics;
 using System.Threading.Tasks;
 using CCH.MapClusterController;
-using MonoTouch.CoreLocation;
-using MonoTouch.Foundation;
-using MonoTouch.MapKit;
-using MonoTouch.UIKit;
+using CoreLocation;
+using Foundation;
+using MapKit;
+using UIKit;
 
 namespace MapClusterSample
 {
@@ -53,13 +53,13 @@ namespace MapClusterSample
 			NSNumber lng = null;
 			NSDictionary annotationAsJSON = null;
 
-			for (int i = 0; i < json.Count; i++) 
+			for (nuint i = 0; i < json.Count; i++) 
 			{
 				annotationAsJSON = json.GetItem<NSDictionary>(i);
 				annotation = new MKPointAnnotation();
 				lat = annotationAsJSON.ValueForKeyPath(new NSString("location.coordinates.latitude")) as NSNumber;
 				lng = annotationAsJSON.ValueForKeyPath(new NSString("location.coordinates.longitude")) as NSNumber;
-				annotation.Coordinate = new CLLocationCoordinate2D(lat.DoubleValue, lng.DoubleValue);
+				annotation.SetCoordinate(new CLLocationCoordinate2D(lat.DoubleValue, lng.DoubleValue));
 				annotation.Title = annotationAsJSON.ValueForKeyPath(new NSString("person.lastName")).ToString();
 				annotations.Add(annotation);
 			}
@@ -85,7 +85,7 @@ namespace MapClusterSample
 			{
 			}
 
-			public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, NSObject annotation)
+			public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 			{
 				MKAnnotationView annotationView = null;
 
@@ -96,7 +96,7 @@ namespace MapClusterSample
 					if (pin == null)
 						pin = new MKPinAnnotationView(null, "Pin");
 
-					pin.Annotation = mapClusterAnnotation;
+					pin.Annotation = (IMKAnnotation)mapClusterAnnotation;
 					pin.CanShowCallout = true;
 					annotationView = pin;
 				}

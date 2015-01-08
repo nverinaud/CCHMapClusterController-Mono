@@ -36,7 +36,6 @@ Global
 		{01A43856-E249-4B76-89E2-8106C7D9F834}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = CCHMapClusterController-Mono.csproj
-		version = 1.4.1
+		version = 1.6.5
 	EndGlobalSection
 EndGlobal

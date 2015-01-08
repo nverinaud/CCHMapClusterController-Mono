@@ -10,31 +10,43 @@
 	<string>CCHMapClusterControllerLib</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E7303CBE-DED2-4902-A660-A5F2C1E890BD</key>
-		<string>ssh://github.com/nverinaud/CCHMapClusterController-Mono.git</string>
+		<key>11AA031F7A1AE22A4EBCFF7DDB1C4990E185C0E4</key>
+		<string>https://github.com/choefele/CCHMapClusterController</string>
+		<key>7CF9C65A45FC4C2FECA0D03F3697479704D43EE3</key>
+		<string>github.com:nverinaud/CCHMapClusterController-Mono.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CCHMapClusterControllerLib/CCHMapClusterControllerLib.xcodeproj/project.xcworkspace</string>
+	<string>CCHMapClusterControllerLib/CCHMapClusterControllerLib.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E7303CBE-DED2-4902-A660-A5F2C1E890BD</key>
+		<key>11AA031F7A1AE22A4EBCFF7DDB1C4990E185C0E4</key>
+		<string>../../..CCHMapClusterController</string>
+		<key>7CF9C65A45FC4C2FECA0D03F3697479704D43EE3</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/nverinaud/CCHMapClusterController-Mono.git</string>
+	<string>github.com:nverinaud/CCHMapClusterController-Mono.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E7303CBE-DED2-4902-A660-A5F2C1E890BD</string>
+	<string>7CF9C65A45FC4C2FECA0D03F3697479704D43EE3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E7303CBE-DED2-4902-A660-A5F2C1E890BD</string>
+			<string>7CF9C65A45FC4C2FECA0D03F3697479704D43EE3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CCHMapClusterController-Mono</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>11AA031F7A1AE22A4EBCFF7DDB1C4990E185C0E4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CCHMapClusterController-MonoCCHMapClusterController</string>
 		</dict>
 	</array>
 </dict>
