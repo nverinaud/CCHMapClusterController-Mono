@@ -79,11 +79,11 @@ namespace CCH.MapClusterController
 	{
 		[Abstract]
 		[Export ("mapClusterController:didAddAnnotationViews:")]
-		void MapClusterDidAddAnnotationViews (CCHMapClusterController mapClusterController, NSObject [] annotationViews);
+		void MapClusterDidAddAnnotationViews (CCHMapClusterController mapClusterController, MKAnnotationView [] annotationViews);
 
 		[Abstract]
 		[Export ("mapClusterController:willRemoveAnnotations:withCompletionHandler:")]
-		void MapClusterWillRemoveAnnotations (CCHMapClusterController mapClusterController, NSObject [] annotations, [NullAllowed] Action completionHandler);
+		void MapClusterWillRemoveAnnotations (CCHMapClusterController mapClusterController, IMKAnnotation [] annotations, [NullAllowed] Action completionHandler);
 	}
 
 	public interface ICCHMapAnimator {}
@@ -96,7 +96,7 @@ namespace CCH.MapClusterController
 	}
 
 	[BaseType (typeof (NSObject))]
-	public partial interface CCHMapClusterAnnotation 
+	public partial interface CCHMapClusterAnnotation : IMKAnnotation
 	{
 		[Export ("mapClusterController", ArgumentSemantic.Assign)]
 		CCHMapClusterController MapClusterController { get; set; }
@@ -108,7 +108,10 @@ namespace CCH.MapClusterController
 		string Subtitle { get; set; }
 
 		[Export ("coordinate", ArgumentSemantic.Assign)]
-		CLLocationCoordinate2D Coordinate { get; set; }
+		CLLocationCoordinate2D Coordinate { get; }
+
+		[Bind ("setCoordinate:")] 
+		void SetCoordinate(CLLocationCoordinate2D value);
 
 		[Export ("delegate", ArgumentSemantic.Assign)]
 		CCHMapClusterControllerDelegate Delegate { get; set; }
@@ -185,13 +188,13 @@ namespace CCH.MapClusterController
 		IntPtr Constructor (MKMapView mapView);
 
 		[Export ("addAnnotations:withCompletionHandler:")]
-		void AddAnnotations (NSObject [] annotations, [NullAllowed] Action completionHandler);
+		void AddAnnotations (IMKAnnotation [] annotations, [NullAllowed] Action completionHandler);
 
 		[Export ("removeAnnotations:withCompletionHandler:")]
-		void RemoveAnnotations (NSObject [] annotations, [NullAllowed] Action completionHandler);
+		void RemoveAnnotations (IMKAnnotation [] annotations, [NullAllowed] Action completionHandler);
 
 		[Export ("selectAnnotation:andZoomToRegionWithLatitudinalMeters:longitudinalMeters:")]
-		void SelectAnnotation (MKAnnotation annotation, double latitudinalMeters, double longitudinalMeters);
+		void SelectAnnotation (IMKAnnotation annotation, double latitudinalMeters, double longitudinalMeters);
 	}
 
 //	public partial interface CCHMapClusterAnnotation 

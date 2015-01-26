@@ -6,9 +6,10 @@
 //
 using System;
 using System.Collections.Generic;
-using CoreGraphics;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using CCH.MapClusterController;
+using CoreGraphics;
 using CoreLocation;
 using Foundation;
 using MapKit;
@@ -87,6 +88,8 @@ namespace MapClusterSample
 
 			public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 			{
+				Debug.WriteLine("Annotation : {0} <{1}>", annotation, annotation.GetType());
+
 				MKAnnotationView annotationView = null;
 
 				if (annotation is CCHMapClusterAnnotation)
@@ -96,14 +99,22 @@ namespace MapClusterSample
 					if (pin == null)
 						pin = new MKPinAnnotationView(null, "Pin");
 
-					pin.Annotation = (IMKAnnotation)mapClusterAnnotation;
+					pin.PinColor = MKPinAnnotationColor.Green;
+					pin.Annotation = mapClusterAnnotation;
 					pin.CanShowCallout = true;
 					annotationView = pin;
 				}
 
 				return annotationView;
 			}
+
+			public override void RegionChanged(MKMapView mapView, bool animated)
+			{
+				if (mapView.Annotations.Length > 0)
+				{
+					Debug.WriteLine("Region changed, annotations : {0}", mapView.Annotations);
+				}
+			}
 		}
 	}
 }
-
