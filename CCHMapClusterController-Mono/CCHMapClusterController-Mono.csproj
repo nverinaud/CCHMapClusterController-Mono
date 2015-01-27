@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>CCH.MapClusterController</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <ReleaseVersion>1.6.5</ReleaseVersion>
+    <ReleaseVersion>1.6.5.1</ReleaseVersion>
     <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
