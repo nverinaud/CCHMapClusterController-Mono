@@ -23,6 +23,11 @@ Mono port of the excellent [CCHMapClusterController library](https://github.com/
 
 ### Sample usage
 
+**Important note**
+
+When the `MKMapView` request annotation views, the given `IMKAnnotation` may be wrapped in a `MKAnnotationWrapper` object (see issue #2).
+The workaround consists of calling the runtime to get the underlying `NSObject`, see below.
+
 ```c#
 using CCH.MapClusterController;
 
@@ -43,6 +48,22 @@ namespace MyNamespace
 			var annotations = /* Get annotations */;
 			_mapClusterController = new CCHMapClusterController(MapView);
 			_mapClusterController.AddAnnotations(annotations, null);
+
+			MapView.Delegate = new MapDelegate();
+		}
+	}
+
+	internal class MapDelegate : MKMapViewDelegate
+	{
+		public MapDelegate() : base()
+		{
+		}
+
+		public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation anno)
+		{
+			var annotation = ObjCRuntime.Runtime.GetNSObject(anno.Handle) as CCHMapClusterAnnotation; // this is required to get the underlying annotation object
+
+			return null;
 		}
 	}
 }

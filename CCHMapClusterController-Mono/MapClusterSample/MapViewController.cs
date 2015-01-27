@@ -14,6 +14,7 @@ using CoreLocation;
 using Foundation;
 using MapKit;
 using UIKit;
+using ObjCRuntime;
 
 namespace MapClusterSample
 {
@@ -86,9 +87,11 @@ namespace MapClusterSample
 			{
 			}
 
-			public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+			public override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation anno)
 			{
-				Debug.WriteLine("Annotation : {0} <{1}>", annotation, annotation.GetType());
+				Debug.WriteLine("Anno : {0}", anno);
+
+				var annotation = Runtime.GetNSObject(anno.Handle);
 
 				MKAnnotationView annotationView = null;
 
